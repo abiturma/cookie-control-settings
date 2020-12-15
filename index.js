@@ -1,5 +1,5 @@
-import cookies from "cookies";
-import options from "options";
+import cookies from "./cookies";
+import options from "./options";
 
 export default {
     cookies,
