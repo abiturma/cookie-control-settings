@@ -1,0 +1,48 @@
+.cookieControl{
+  p, button, .cookieControl__ModalCookieName, li{
+    font-size: 0.85rem !important;
+  }
+  h3{
+    @apply hidden;
+  }
+  .cookieControl__Bar{
+    background: theme("colors.sand");
+
+    button{
+      @apply rounded-md;
+      padding: 9.6px 12px;
+    }
+  }
+  .cookieControl__BarButtons > button:first-child{
+    background: none;
+    color: theme("colors.darkSand");
+  }
+
+  .cookieControl__BarContainer{
+    @apply items-center;
+    @apply px-2;
+
+    p{
+      @apply mt-0;
+    }
+
+    & > div:first-child{
+      @apply flex;
+      @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+      @apply text-center;
+      @apply w-full;
+
+      @media screen and (min-width: theme('screens.laptop')){
+        @apply items-start;
+      }
+    }
+  }
+  .cookieControl__BarButtons{
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+  }
+
+}
