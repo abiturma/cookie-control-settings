@@ -4,8 +4,8 @@ var hjId = "2158427";
 
 
 if(process.env.NODE_ENV === 'production'){
-  var gaId = "";
-  var hjId = "";
+  var gaId = "GTM-P5T9ZZR";
+  var hjId = "2158427";
 }
 
 //Initialize Hotjar
