@@ -1,3 +1,5 @@
+const analyticsHelper = require('./analytics-helper')
+
 export default {
     necessary: [
         {
@@ -18,21 +20,24 @@ export default {
             description: {
                 de: 'Google Analytics hilft uns zu erkennen wie viele Nutzer unsere Seite besuchen.'
             },
-            src: 'https://www.googletagmanager.com/gtag/js?id=UA-53838435-1',
+            initialState: true,
+            src: `https://www.googletagmanager.com/gtag/js?id=${analyticsHelper.gaId}`,
             async: true,
-            cookies: ['_ga', '_gat_gtag_UA_53838435_1', '_gid'],
-            accepted: () => {
-
-
-                window.dataLayer = window.dataLayer || [];
-
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-
-                gtag('js', new Date());
-                gtag('config', 'UA-53838435-1', {anonymize_ip: true});
-            }
+            cookies: ['_ga', '_gat', '_gid'],
+            accepted: analyticsHelper.acceptGa
+        },
+        {
+            name: {
+                de: 'Hotjar'
+            },
+            description: {
+                de: 'Hotjar hilft uns die korrekte Funktionsweise unserer Seite sicherzustellen.'
+            },
+            initialState: true,
+            src: `https://static.hotjar.com/c/hotjar-${analyticsHelper.hjId}.js?sv=6`,
+            async: true,
+            cookies: ['_hjid', '_hjFirstSeen', '_hjIncludedInPageviewSample', '_hjAbsoluteSessionInProgress'],
+            accepted: analyticsHelper.acceptHj
         }
     ]
 }
