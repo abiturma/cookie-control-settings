@@ -11,6 +11,7 @@
     button{
       @apply rounded-md;
       padding: 9.6px 12px;
+      @apply whitespace-nowrap;
     }
   }
   .cookieControl__BarButtons > button:first-child{
