@@ -2,29 +2,36 @@
 var gaId = "GTM-W8CQGFM";
 var hjId = "2158427";
 
+
+if(process.env.NODE_ENV === 'production'){
+  var gaId = "";
+  var hjId = "";
+}
+
 //Initialize Hotjar
 //window._hjSettings = { hjid: hjId, hjsv: 6 };
 
 var init = () => {
   window._hjSettings = { hjid: hjId, hjsv: 6 };
   window.dataLayer = window.dataLayer || [];
-  window.hj = window.hj || function () {
-    (window.hj.q = window.hj.q || []).push(arguments);
-  };
-  window.gtag = () => {
+  window.gtag = function() {
     window.dataLayer.push(arguments)
   }
-
 };
 
 var acceptGa = function () {
-  gtag({
-    "gtm.start": new Date().getTime(),
-    event: "gtm.js",
+  dataLayer.push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
   });
 };
 
-var acceptHj = function () {};
+var acceptHj = function () {
+  window.hj = window.hj ||
+    function() {
+      (window.hj.q = window.hj.q || []).push(arguments);
+    };
+};
 
 exports.gaId = gaId;
 exports.hjId = hjId;
