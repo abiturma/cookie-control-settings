@@ -1,18 +1,18 @@
 //todo: Change GTM-ID to productive one
-var gaId = "GTM-W8CQGFM";
-var hjId = "2158427";
-
-
-if(process.env.NODE_ENV === 'production'){
-  var gaId = "GTM-P5T9ZZR";
-  var hjId = "2158427";
-}
+// var gaId = "GTM-W8CQGFM";
+// var hjId = "2158427";
+//
+//
+// if(process.env.NODE_ENV === 'production'){
+//   var gaId = "GTM-P5T9ZZR";
+//   var hjId = "2158427";
+// }
 
 //Initialize Hotjar
 //window._hjSettings = { hjid: hjId, hjsv: 6 };
 
-var init = () => {
-  window._hjSettings = { hjid: hjId, hjsv: 6 };
+var init = (ids) => {
+  window._hjSettings = { hjid: ids.hjId, hjsv: 6 };
   window.dataLayer = window.dataLayer || [];
   window.gtag = function() {
     window.dataLayer.push(arguments)
