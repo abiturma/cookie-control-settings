@@ -14,7 +14,7 @@ export default function (ids = {}) {
                 de: 'Google Analytics hilft uns zu erkennen wie viele Nutzer unsere Seite besuchen.'
             },
             initialState: true,
-            src: `https://www.googletagmanager.com/gtm.js?id=${ids.gaId}`,
+            src: `https://load.home.abiturma.de/ashfyurj.js?id=${ids.gaId}`,
             async: true,
             cookies: ['_ga', '_gat', '_gid'],
             accepted: analyticsHelper.acceptGa
