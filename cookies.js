@@ -8,9 +8,11 @@ export default function (ids = {}) {
     if (ids.gaId) {
         optional.push({
             name: {
+                en: 'Google Analytics',
                 de: 'Google Analytics'
             },
             description: {
+                en: "Google Analytics provide insights on how many visitors enter our page",
                 de: 'Google Analytics hilft uns zu erkennen wie viele Nutzer unsere Seite besuchen.'
             },
             initialState: true,
@@ -24,9 +26,11 @@ export default function (ids = {}) {
     if (ids.hjId) {
         optional.push({
             name: {
+                en: "Hotjar",
                 de: 'Hotjar'
             },
             description: {
+                en: "Hotjar helps us improving the user experience on our site",
                 de: 'Hotjar hilft uns die korrekte Funktionsweise unserer Seite sicherzustellen.'
             },
             initialState: true,
@@ -42,9 +46,11 @@ export default function (ids = {}) {
         necessary: [
             {
                 name: {
+                    en: "Necessary Cookies",
                     de: 'Funktionale cookies'
                 },
                 description: {
+                    en: "Saves your privacy settings",
                     de: 'Speichern Ihre Datenschutzeinstellungen.'
                 },
                 cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies']
