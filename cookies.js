@@ -19,6 +19,7 @@ export default function (ids = {}) {
             src: `https://load.home.abiturma.de/ekbxmllt.js?id=${ids.gaId}`,
             async: true,
             cookies: ['_ga', '_gat', '_gid'],
+            targetCookieIds: ['_ga', '_gat', '_gid'],
             accepted: analyticsHelper.acceptGa
         })
     }
@@ -37,6 +38,7 @@ export default function (ids = {}) {
             src: `https://static.hotjar.com/c/hotjar-${ids.hjId}.js?sv=6`,
             async: true,
             cookies: ['_hjid', '_hjFirstSeen', '_hjIncludedInPageviewSample', '_hjAbsoluteSessionInProgress'],
+            targetCookieIds: ['_hjid', '_hjFirstSeen', '_hjIncludedInPageviewSample', '_hjAbsoluteSessionInProgress'],
             accepted: analyticsHelper.acceptHj
         })
     }
@@ -53,7 +55,8 @@ export default function (ids = {}) {
                     en: "Saves your privacy settings",
                     de: 'Speichern Ihre Datenschutzeinstellungen.'
                 },
-                cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies']
+                cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies'],
+                targetCookieIds: ['cookie_control_consent', 'cookie_control_enabled_cookies']
             }
         ],
         optional: optional
