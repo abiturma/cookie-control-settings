@@ -7,6 +7,7 @@ export default function (ids = {}) {
 
     if (ids.gaId) {
         optional.push({
+            id: 'google-analytics',
             name: {
                 en: 'Google Analytics',
                 de: 'Google Analytics'
@@ -26,6 +27,7 @@ export default function (ids = {}) {
 
     if (ids.hjId) {
         optional.push({
+            id: 'hotjar'
             name: {
                 en: "Hotjar",
                 de: 'Hotjar'
