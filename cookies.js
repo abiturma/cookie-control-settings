@@ -27,7 +27,7 @@ export default function (ids = {}) {
 
     if (ids.hjId) {
         optional.push({
-            id: 'hotjar'
+            id: 'hotjar',
             name: {
                 en: "Hotjar",
                 de: 'Hotjar'
