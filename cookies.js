@@ -49,6 +49,7 @@ export default function (ids = {}) {
     return {
         necessary: [
             {
+                id: 'functional',
                 name: {
                     en: "Necessary Cookies",
                     de: 'Funktionale cookies'
