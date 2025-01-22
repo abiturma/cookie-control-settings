@@ -16,16 +16,18 @@ var init = (ids) => {
 };
 // Funktion zum Akzeptieren von Google Analytics
 var acceptGa = function () {
-  window.dataLayer.push({
-    'gtm.start': new Date().getTime(),
-    event: 'gtm.js'
-  });
   window.gtag('consent', 'update', {
     'analytics_storage': 'granted',
     'ad_storage': 'granted',
     'ad_personalization': 'granted',
     'ad_user_data': 'granted'
   });
+
+  window.dataLayer.push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
+  });
+
 };
 
 var acceptHj = function () {
