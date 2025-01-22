@@ -20,7 +20,7 @@ var acceptGa = function () {
     'gtm.start': new Date().getTime(),
     event: 'gtm.js'
   });
-  gtag('consent', 'update', {
+  window.gtag('consent', 'update', {
     'analytics_storage': 'granted',
     'ad_storage': 'granted',
     'ad_personalization': 'granted',
