@@ -10,14 +10,12 @@ var init = (ids) => {
   gtag('consent', 'default', {
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
+   // 'ad_personalization': 'denied',
     'analytics_storage': 'denied'
   });
 };
 // Funktion zum Akzeptieren von Google Analytics
 var acceptGa = function () {
-
-
   window.dataLayer.push({
     'gtm.start': new Date().getTime(),
     event: 'gtm.js'
